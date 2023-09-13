@@ -7,6 +7,7 @@ import {
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import Icon from './Icon';
+import { Button } from '@nextui-org/react';
 
 interface Props {
   session: Session | null;
@@ -33,7 +34,7 @@ export default function AuthButton({ session }: Props) {
   return (
     <header>
       {session ? (
-        <button onClick={handleSignOut}>Sign out</button>
+        <Button onClick={handleSignOut}>Sign out</Button>
       ) : (
         <button
           type="button"
